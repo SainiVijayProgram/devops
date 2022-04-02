@@ -1,7 +1,7 @@
-param name string = 'site001'
+param name string = 'site0019784'
 param location string = resourceGroup().location
 
-param acrName string = 'myAcr'
+param acrName string = 'myAcr9784404866'
 param dockerUsername string = 'adminUser'
 param dockerImageAndTag string = 'app/frontend:latest'
 param acrResourceGroup string = resourceGroup().name
