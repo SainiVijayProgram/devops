@@ -7,25 +7,16 @@ param dockerImageAndTag string = 'app/frontend:latest'
 param acrResourceGroup string = resourceGroup().name
 param acrSubscription string = subscription().subscriptionId
 
-
-resource acr 'Microsoft.ContainerRegistry/registries@2021-09-01' = {
- location: location
- name: acrName
- sku: {
-   name: 'Basic'
- }
- properties: {
-   adminUserEnabled: true
- }
+// external ACR info
+resource containerRegistry 'Microsoft.ContainerRegistry/registries@2019-05-01' existing = {
+  scope: resourceGroup(acrSubscription, acrResourceGroup)
+  name: acrName
 }
 
 var websiteName = '${name}-site'
 
 resource site 'microsoft.web/sites@2020-06-01' = {
   name: websiteName
-  dependsOn: [ 
-    acr 
-  ]
   location: location
   properties: {
     siteConfig: {
