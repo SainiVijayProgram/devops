@@ -27,7 +27,7 @@ jobs:
         subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION }}
         resourceGroupName: ${{ secrets.AZURE_RG }}
         template: ./infra/deploy_app_service.bicep
-        parameters: storageAccountType=Standard_LRS
+        parameters: location=eus
 
       # output containerName variable from template  m
     - run: echo ${{ steps.deploy.outputs.containerName }}
