@@ -29,5 +29,5 @@ jobs:
         template: ./infra/deploy_app_service.bicep
         parameters: location=eastus
 
-      # output containerName variable from template  m
+      # output containerName variable from template 
     - run: echo ${{ steps.deploy.outputs.containerName }}
