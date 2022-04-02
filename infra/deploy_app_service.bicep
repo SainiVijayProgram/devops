@@ -7,11 +7,6 @@ param dockerImageAndTag string = 'app/frontend:latest'
 param acrResourceGroup string = resourceGroup().name
 param acrSubscription string = subscription().subscriptionId
 
-// external ACR info
-resource containerRegistry 'Microsoft.ContainerRegistry/registries@2019-05-01' existing = {
-  scope: resourceGroup(acrSubscription, acrResourceGroup)
-  name: acrName
-}
 
 resource acr 'Microsoft.ContainerRegistry/registries@2021-09-01' = {
  location: location
