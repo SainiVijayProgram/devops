@@ -27,7 +27,7 @@ jobs:
     - name: Testing PowerShell Script
       id: input_step
       run: |
-           $val = Get-Service -Name AppHostSvc
+           $val = Get-Service -Name actions.runner.SainiVijayProgram-devops.testvm
            echo ::set-output name=output_var::$val
     - name: Using the powershell value from previous step
       id: output_step
