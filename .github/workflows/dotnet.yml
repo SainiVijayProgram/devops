@@ -26,11 +26,13 @@ jobs:
       
     - name: Testing PowerShell Script
       id: input_step
-      run: |
+      run: |  
            $val = Get-Service -Name actions.runner.SainiVijayProgram-devops.testvm
+           $val
            echo ::set-output name=output_var::$val
     - name: Using the powershell value from previous step
       id: output_step
       run: | 
-            steps.input_step.outputs.output_var
+            echo "I am in step2"
+            ${{ steps.input_step.outputs.output_var }}
            
