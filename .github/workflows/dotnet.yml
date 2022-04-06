@@ -23,3 +23,14 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      
+    - name: Testing PowerShell Script
+      id: input_step
+      run: |
+           $val = Get-Service -Name AppHostSvc
+           echo ::set-output name=output_var::$val
+    - name: Using the powershell value from previous step
+      id: output_step
+      run: | 
+            steps.input_step.outputs.output_var
+           
