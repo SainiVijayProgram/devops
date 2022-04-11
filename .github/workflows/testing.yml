@@ -1,0 +1,11 @@
+name: manual_dispatch
+on: workflow_dispatch
+
+
+jobs:
+  deploy-bicep-to-azure:
+    runs-on: ubuntu-latest
+    steps:
+
+      # Checkout code
+    - uses: actions/checkout@main
