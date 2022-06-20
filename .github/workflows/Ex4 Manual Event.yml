@@ -21,4 +21,4 @@ jobs:
     - name: runscript
       run:  |
         echo "I am in"
-        echo $logLevel
+        echo ${{ env.logLevel }}
