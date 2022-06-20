@@ -10,8 +10,7 @@ permissions:
   contents: read
 
 jobs:
-  terraform:
-    name: 'Terraform'
+  jobName:
     runs-on: ubuntu-latest
     environment: prod
 
