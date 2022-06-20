@@ -1,4 +1,5 @@
 name: 'Git Action Demo'
+# -- left navigation name in Actions page
 
 on:
   push:
@@ -13,11 +14,6 @@ jobs:
   jobName:
     runs-on: ubuntu-latest
     environment: prod
-
-    # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
-    defaults:
-      run:
-        shell: bash
 
     steps:
     # Checkout the repository to the GitHub Actions runner
