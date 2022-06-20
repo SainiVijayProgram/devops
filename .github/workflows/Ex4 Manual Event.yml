@@ -1,0 +1,24 @@
+name: 'Manual Events Demo'
+
+on:
+   workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'     
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags' 
+
+jobs:
+  jobName:
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: runscript
+      run:  |
+        echo "I am in"
+        echo $logLevel
