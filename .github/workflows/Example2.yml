@@ -7,17 +7,20 @@ on:
   pull_request:
 
 env:
-  DAY_OF_WEEK: Monday
+  DAY_OF_WEEK: Funday
+  testvar: val1
 
 jobs:
   mainjob:
     name: 'Show the env vars'
     runs-on: ubuntu-latest
     env:
-      Greeting: Hello
+      Greeting: Dear
+      testvar: val2
     
     steps:
     - name: show-values-of-env-vars
       run: echo "$Greeting $First_Name. Today is $DAY_OF_WEEK!"
       env:
-          First_Name: Mona
+          First_Name: Student
+          testvar: val3
