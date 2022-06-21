@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K3qq0ERza7Dsw58WZlq1e3ABOdq1Xz4tRlhcRekpjByh0RJ0cxoJdISmF5EGo1JeIOfraA9jnqjPZkkhRiikGA==",
+  "dgSpecHash": "kAQOe6EEl7ndbIr1B7rgrIk5yvYJsZjP/XZKTGecY5F+DRn+CW3lM7uGwr3T47erYEhwdmwS+/E0Yw+TyyrBuA==",
   "success": true,
-  "projectFilePath": "C:\\practice\\devops\\devops.csproj",
+  "projectFilePath": "C:\\func_related\\dotnet\\devops\\devops.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
