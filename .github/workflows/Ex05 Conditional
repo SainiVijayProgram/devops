@@ -5,4 +5,5 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-    - run: echo "I am executed"
+    - name: stepname
+      run: echo "I am executed"
