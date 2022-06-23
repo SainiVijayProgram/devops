@@ -15,7 +15,6 @@ jobs:
         with:
           name: homework
           path: math-homework.txt
-       
       - name: Label when approved
 		uses: pullreminders/label-when-approved-action@main
 		env:
