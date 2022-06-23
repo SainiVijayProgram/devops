@@ -1,25 +1,23 @@
---- 
-jobs: 
-  job_1: 
-    name: "Add 3 and 7"
+name: Label when approved
+
+on: [push]
+
+jobs:
+  job_1:
+    name: Add 3 and 7
     runs-on: ubuntu-latest
-    steps: 
-      - 
-        run: "expr 3 + 7 > math-homework.txt\n"
-        shell: bash
-      - 
-        name: "Upload math result for job 1"
+    steps:
+      - shell: bash
+        run: |
+          expr 3 + 7 > math-homework.txt
+      - name: Upload math result for job 1
         uses: actions/upload-artifact@v3
-        with: 
+        with:
           name: homework
           path: math-homework.txt
-      - 
-        env: 
-          ADD_LABEL: approved
-          APPROVALS: "1"
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-        name: "Label when approved"
+      - name: Label when approved
         uses: pullreminders/label-when-approved-action@main
-name: "Label when approved"
-true: 
-  - push
+        env:
+          APPROVALS: "1"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ADD_LABEL: "approved"
