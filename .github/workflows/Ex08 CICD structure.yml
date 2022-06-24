@@ -26,3 +26,16 @@ jobs:
       run: |
         echo ${{ matrix.version }}
         echo ${{ matrix.os }}
+
+  example_matrix3:
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, ubuntu-20.04]
+        version: [10, 12, 14]
+    needs: example_matrix1
+    runs-on: ubuntu-20.04
+    steps:
+    - name: stepname2
+      run: |
+        echo ${{ matrix.version }}
+        echo ${{ matrix.os }}
