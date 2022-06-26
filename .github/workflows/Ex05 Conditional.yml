@@ -6,6 +6,7 @@ name: Conditional Statement
 on: push
 jobs:
   prod-check:
+    name: test
     if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     steps:
