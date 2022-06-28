@@ -1,4 +1,4 @@
-name: 'Git Action Demo'
+name: 'GitHub Workflow Demo'
 # -- left navigation name in Actions page
 
 on:
@@ -21,4 +21,4 @@ jobs:
     runs-on: ubuntu-latest
     
     steps: 
-    - run:  echo "Food Bye!!! See you around"
+    - run:  echo "Good Bye!!! See you around"
