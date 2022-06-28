@@ -1,0 +1,24 @@
+name: 'Git Action Demo'
+# -- left navigation name in Actions page
+
+on:
+  push:
+    branches:
+    - "dev"
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  jobName:
+    runs-on: ubuntu-latest
+    environment: prod
+
+    steps:
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v3
+      
+    - name: runscript
+      run:  echo "I am in"
