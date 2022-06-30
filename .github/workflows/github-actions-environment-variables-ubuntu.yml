@@ -1,5 +1,4 @@
-# Publish GitHub workflow artifacts tutorial example
-name: Publish GitHub Actions Artifacts Example
+name: dEFAULT gITHUB vARS
 on:
   workflow_dispatch:
   
