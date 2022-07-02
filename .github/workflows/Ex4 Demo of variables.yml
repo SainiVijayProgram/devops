@@ -1,11 +1,8 @@
 name: 'Env Vars'
 
 on:
-  push:
-    branches:
-    - "dev"
-  pull_request:
-
+  workflow_dispatch:
+  
 env:
   DAY_OF_WEEK: Funday
   testvar: val1
@@ -24,3 +21,6 @@ jobs:
       env:
           First_Name: Student
           testvar: val3
+    - run: |
+          echo $PROD_PASSWORD
+          echo $AZURE_RG
