@@ -3,7 +3,7 @@ on:
   - cron: '0 * * * *'
   workflow_dispatch:
 
-name: Passing Variable Values
+name: Passing Variable Values to another step
 
 jobs:
   passing-values-bw-steps:

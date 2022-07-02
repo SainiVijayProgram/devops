@@ -3,7 +3,9 @@
 # refs/heads/main in order to proceed with the following steps in the workflow would look something like this:
 
 name: Conditional Statement
+
 on: push
+
 jobs:
   prod-check:
     name: test

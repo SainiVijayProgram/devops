@@ -1,4 +1,4 @@
-name: 'Env Vars'
+name: 'Custom Env Vars'
 
 on:
   workflow_dispatch:
@@ -21,6 +21,3 @@ jobs:
       env:
           First_Name: Student
           testvar: val3
-    - run: |
-          echo $PROD_PASSWORD
-          echo $AZURE_RG

@@ -17,17 +17,24 @@ on:
       type: environment
       required: true 
 
+# A comment to make your workflow easy to understand
 
 jobs:
   sayHello:
     runs-on: ubuntu-latest
     
     steps: 
-    - name: runscript
+    - name: runscript-to-say-hello
       run:  echo "Howdy GitHub Actions"
+
+    
    
   sayBye:
     runs-on: windows-latest
     
     steps: 
-    - run:  echo "Good Bye!!! See you around"
+    # Runs a set of commands using the runners shell
+    - name: runscript-to-say-good-bye
+      run: | 
+        echo "Good Bye!!! "
+        echo "See you around"
