@@ -4,8 +4,12 @@ on:
   push:
     branches:
     - "dev"
+    paths:
+    - ".github/workflows/*"
     
   pull_request:
+    branches-ignore:
+    - 'test/exp*'
   
   workflow_dispatch:
     environment:
@@ -20,7 +24,7 @@ jobs:
     
     steps: 
     - name: runscript
-      run:  echo "Hello There"
+      run:  echo "Howdy GitHub Actions"
    
   sayBye:
     runs-on: windows-latest

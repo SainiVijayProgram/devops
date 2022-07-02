@@ -1,19 +1,22 @@
-name: dEFAULT gITHUB vARS
+name: Default Github Vars
+
+
 on:
   workflow_dispatch:
   
+  
 jobs:
-  github-actions-environment-variables-ubuntu:
+  ubuntu-environment-variables:
     runs-on: ubuntu-latest
     steps:
       - run: env
 
-  github-actions-environment-variables-windows:
+  windows-environment-variables:
     runs-on: windows-latest
     steps:
       - run: env
 
-  github-actions-environment-variables-macos:
+  macos-environment-variables:
     runs-on: macos-latest
     steps:
       - run: env
