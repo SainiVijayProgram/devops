@@ -8,9 +8,9 @@ on: push
 
 jobs:
   prod-check:
-    name: test
+    name: run-job-if-condition-is-satisfied
     if: github.ref == 'refs/heads/dev'
     runs-on: ubuntu-latest
     steps:
-    - name: stepname
+    - name: step-name
       run: echo "I am executed"
