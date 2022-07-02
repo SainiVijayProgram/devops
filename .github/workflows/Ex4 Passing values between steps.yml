@@ -1,0 +1,27 @@
+on:
+  schedule:
+  - cron: '0 * * * *'
+  workflow_dispatch:
+
+name: Passing Variable Values
+
+jobs:
+  passing-values-bw-steps:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create-Variables
+      id: var_source
+      run: |
+       echo "::set-output name=var1-name::TechSckool"
+       echo "::set-output name=var2-date::$(date +'%Y-%m-%d-%H-%M')"
+    
+    - name: Get-Variable-Value
+      run: |
+       echo "Var1: $var1-name"
+       echo "Var2: $var2-date"
+      with:
+        var1-name: ${{ steps.var_source.outputs.var1-name }}
+        var2-date: ${{ steps.var_source.outputs.var2-date }}
+
+
+
