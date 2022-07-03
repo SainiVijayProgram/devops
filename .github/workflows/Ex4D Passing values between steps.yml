@@ -18,10 +18,4 @@ jobs:
     - name: Get-Variable-Value
       run: |
        echo ${{ steps.var_source.outputs.var1_name }}
-<<<<<<< HEAD
        echo ${{ steps.var_source.outputs.var2_date }}
-
-=======
->>>>>>> 420f8404cbf47d85655e1ae460d624862b7a9c59
-
-
