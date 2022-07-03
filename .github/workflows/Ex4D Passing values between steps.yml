@@ -17,5 +17,4 @@ jobs:
     
     - name: Get-Variable-Value
       run: |
-       echo ${{ steps.var_source.outputs.var1_name }}
-       echo ${{ steps.var_source.outputs.var2_date }}
+       echo ${{ steps.var_source.outputs.var1_name }} ${{ steps.var_source.outputs.var2_date }}

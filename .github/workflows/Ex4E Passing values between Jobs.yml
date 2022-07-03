@@ -3,7 +3,7 @@ name: 'passing value to next job'
 on:  workflow_dispatch
 
 jobs:
-  passing-value-to-next-job:
+  job1:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
