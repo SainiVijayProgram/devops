@@ -17,6 +17,8 @@ jobs:
     
     - name: Get-Variable-Value
       run: |
-       echo "Var1: $var1_name"
-       echo "Var2: $var2_date"
+       echo ${{ steps.var_source.outputs.var1_name }}
+       echo ${{ steps.var_source.outputs.var2_date }}
+
+
 
