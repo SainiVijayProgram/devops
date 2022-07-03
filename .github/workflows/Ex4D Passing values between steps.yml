@@ -17,6 +17,6 @@ jobs:
     
     - name: Get-Variable-Value
       run: |
-       echo "Var1: $var1-name"
-       echo "Var2: $var2-date"
+       echo "Var1: $var1_name"
+       echo "Var2: $var2_date"
 
