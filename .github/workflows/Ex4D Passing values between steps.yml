@@ -12,16 +12,16 @@ jobs:
     - name: Create-Variables
       id: var_source
       run: |
-       echo "::set-output name=var1-name::TechSckool"
-       echo "::set-output name=var2-date::$(date +'%Y-%m-%d-%H-%M')"
+       echo "::set-output name=var1_name::TechSckool"
+       echo "::set-output name=var2_date::$(date +'%Y-%m-%d-%H-%M')"
     
     - name: Get-Variable-Value
       run: |
        echo "Var1: $var1-name"
        echo "Var2: $var2-date"
       with:
-        var1-name: ${{ steps.var_source.outputs.var1-name }}
-        var2-date: ${{ steps.var_source.outputs.var2-date }}
+        var1_name: ${{ steps.var_source.outputs.var1_name }}
+        var2_date: ${{ steps.var_source.outputs.var2_date }}
 
 
 
