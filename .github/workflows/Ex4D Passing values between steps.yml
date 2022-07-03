@@ -19,9 +19,4 @@ jobs:
       run: |
        echo "Var1: $var1-name"
        echo "Var2: $var2-date"
-      with:
-        var1_name: ${{ steps.var_source.outputs.var1_name }}
-        var2_date: ${{ steps.var_source.outputs.var2_date }}
-
-
 
