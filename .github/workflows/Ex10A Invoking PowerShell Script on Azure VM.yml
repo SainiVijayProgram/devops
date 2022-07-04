@@ -1,0 +1,30 @@
+name: Remote Invoking PowerShell
+
+on:
+
+  push:
+    branches: [ vijay/envvars.yml ]
+    paths:
+      - '.github/workflows/remote_ps.yml'
+  
+    
+jobs:
+  remote-invoke-powershell:
+    runs-on: ubuntu-latest
+    steps:
+    # Checkout code
+    - uses: actions/checkout@v2
+            
+    - uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS_NONPROD }}
+                    
+    - name: Invoke file remotely 
+      run: |
+          az vm run-command invoke -g ipssd00rgpprmry -n windows-runner --command-id RunPowerShellScript --scripts @.github/workflows/script.ps1 --parameters "arg1=somefoo" "arg2=somebar"
+
+      - name: Invoke command remotely 
+        run: |
+              az vm run-command invoke -g ipssd00rgpprmry -n windows-runner --command-id RunPowerShellScript  Â --scripts 'param([string]$arg1,[string]$arg2)' \
+              'Write-Host This is a sample script with parameters $arg1 and $arg2' \
+              --parameters 'arg1=somefoo' 'arg2=somebar'

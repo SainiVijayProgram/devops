@@ -3,6 +3,7 @@ name: Deploy Infra
 on: workflow_dispatch
 
 
+
 jobs:
   deploy-bicep-to-azure:
     runs-on: ubuntu-latest
@@ -27,3 +28,5 @@ jobs:
 
       # output containerName variable from template 
     - run: echo ${{ steps.deploy.outputs.containerName }}
+  
+
