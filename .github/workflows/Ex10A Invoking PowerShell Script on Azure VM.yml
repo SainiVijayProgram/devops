@@ -2,8 +2,9 @@ name: Remote Invoking PowerShell
 
 on:
   push:
-    branches: [ vijay/envvars.yml ]
-    paths:
+    workflow_dispatch
+    #branches: [ vijay/envvars.yml ]
+    #paths:
       - '.github/workflows/remote_ps.yml'
   
     
