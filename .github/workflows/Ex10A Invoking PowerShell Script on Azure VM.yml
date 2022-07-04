@@ -5,7 +5,7 @@ on:
     workflow_dispatch:
     #branches: [ vijay/envvars.yml ]
     #paths:
-    #  - '.github/workflows/remote_ps.yml'
+    #   - '.github/workflows/remote_ps.yml'
   
     
 jobs:
