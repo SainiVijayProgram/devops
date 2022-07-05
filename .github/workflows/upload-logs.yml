@@ -11,4 +11,4 @@ jobs:
       run: echod test
     - name: upload-logs
       if: always()
-      run: "I still got executed"
+      run: echo "I still got executed"
